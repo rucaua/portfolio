@@ -2,12 +2,21 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+
   runtimeConfig: {
     // Server-only keys
     openaiApiKey: process.env.OPENAI_API_KEY,
     openaiAssistantId: process.env.OPENAI_ASSISTANT_ID,
     public: {
-      fullName: 'Max Tymofeiev'
+      fullName: 'Max Tymofeiev',
+      keyFeatures: [
+        {title: '15+', subTitle: 'years of experience'},
+        {title: 'SaaS', subTitle: 'solutions for business'},
+        {title: 'Senior', subTitle: 'full stack developer'},
+        {title: 'AI', subTitle: 'generative model'},
+      ]
     }
   },
+
+  modules: ['@nuxtjs/tailwindcss'],
 })

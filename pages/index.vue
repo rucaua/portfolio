@@ -1,12 +1,20 @@
 <template>
-  <div>
-    <h1>Deployment test</h1>
+  <div class="container mx-auto">
+    <hero-section />
+    <key-features-section :data="keyFeaturesData" />
   </div>
 </template>
 
 <script>
+import HeroSection from '~/components/HeroSection.vue'
+import KeyFeaturesSection from "~/components/KeyFeaturesSection.vue";
 export default {
   name: 'IndexPage',
+  components: {KeyFeaturesSection, HeroSection},
+  setup() {
+    const runtimeConfig = useRuntimeConfig()
+    return {keyFeaturesData: runtimeConfig.public.keyFeatures}
+  },
   head() {
     return {
       title: 'Tymofeiev Max - Portfolio',
