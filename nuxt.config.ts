@@ -5,8 +5,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // Server-only keys
-    openaiApiKey: process.env.OPENAI_API_KEY,
-    openaiAssistantId: process.env.OPENAI_ASSISTANT_ID,
+    openaiApiKey: process.env.NUXT_OPENAI_API_KEY,
+    openaiAssistantId: process.env.NUXT_OPENAI_ASSISTANT_ID,
     public: {
       fullName: 'Max Tymofeiev',
       keyFeatures: [
@@ -18,5 +18,11 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  fontawesome: {
+    icons: {
+      solid: ['paper-plane']
+    }
+  },
+
+  modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
 })

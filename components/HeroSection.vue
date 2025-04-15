@@ -8,14 +8,17 @@
       </div>
 
       <div class="relative">
-
+        <AIChat />
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import AIChat from "~/components/AIChat.vue";
+
 export default {
   name: 'HeroSection',
+  components: {AIChat},
 }
 </script>
