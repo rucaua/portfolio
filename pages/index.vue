@@ -2,6 +2,8 @@
   <div class="container mx-auto">
     <hero-section />
     <key-features-section :data="keyFeaturesData" />
+    <tech-stack-section :data="techData"/>
+    <time-line-section :data="jobsData"></time-line-section>
   </div>
 </template>
 
@@ -13,7 +15,11 @@ export default {
   components: {KeyFeaturesSection, HeroSection},
   setup() {
     const runtimeConfig = useRuntimeConfig()
-    return {keyFeaturesData: runtimeConfig.public.keyFeatures}
+    return {
+      keyFeaturesData: runtimeConfig.public.keyFeatures,
+      jobsData: runtimeConfig.public.jobs,
+      techData: runtimeConfig.public.techList
+    }
   },
   head() {
     return {

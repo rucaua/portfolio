@@ -1,8 +1,8 @@
 <template>
-  <section class="pt-20 md:pt-32">
+  <section class="container mx-auto py-20">
     <div class="flex flex-row">
       <div class="feature-card bg-gradient-to-br from-slate-950 to-teal-950
-                  m-4 p-8 justify-between rounded-lg shadow-lg w-full flex flex-col items-center justify-center"
+                  m-4 p-8 justify-between rounded-lg shadow-lg w-full flex flex-col items-center"
            v-for="(feature, index) in data" :key="index">
         <div class="relative inline-block">
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#7F5AF0] to-[#2cb67d] text-5xl font-bold">

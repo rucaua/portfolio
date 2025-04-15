@@ -2,7 +2,9 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    container: {
+      padding: '4rem',
+    },
   },
   plugins: [],
 }
