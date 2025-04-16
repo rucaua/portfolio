@@ -203,14 +203,20 @@ export default defineNuxtConfig({
                 'code',
                 'server',
                 'home',
-                'chevron-right'
+                'chevron-right',
+                'mobile-button',
+                'at',
+                'door-open'
             ],
             brands: [
                 'php',
                 'js',
                 'git-alt',
                 'css3-alt',
-                'python'
+                'python',
+                'linkedin',
+                'github',
+                'dev'
             ]
         }
     },
