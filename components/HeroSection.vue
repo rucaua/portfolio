@@ -1,9 +1,9 @@
 <template>
-  <section class="container my-28">
+  <section class="container my-28" id="contact">
     <div class="flex flex-col lg:flex-row items-center">
       <div>
         <h2 class="text-9xl font-bold drop-shadow-2xl">Welcome to My Portfolio</h2>
-        <div class="flex flex-row gap-4 mt-20">
+        <div class="flex flex-row gap-4 my-10 py-10 justify-center items-center rounded" data-highlight="contact">
           <a :href="mailLink" class="btn rainbow flex items-center justify-center">
             <font-awesome icon="at" size="2xl" class="mr-2"/> Mail Me
           </a>

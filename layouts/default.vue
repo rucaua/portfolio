@@ -18,6 +18,9 @@
               <li>
                 <NuxtLink to="/resume" class="px-3 py-2 hover:text-primary transition">Resume</NuxtLink>
               </li>
+              <li>
+                <NuxtLink to="/#contact" class="px-3 py-2 hover:text-primary transition">Contacts</NuxtLink>
+              </li>
             </ul>
           </nav>
 

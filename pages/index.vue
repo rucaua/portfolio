@@ -30,6 +30,22 @@ export default {
       currentUrl: useRequestURL()?.hash || ''
     }
   },
+  mounted() {
+    // Watch for hash changes
+    this.$router.afterEach((to) => {
+      if (to.hash === '#contact') {
+        this.$nextTick(() => {
+          const contactElement = document.querySelector('[data-highlight="contact"]');
+          if (contactElement) {
+            contactElement.classList.add('highlight-animation');
+            setTimeout(() => {
+              contactElement.classList.remove('highlight-animation');
+            }, 2000);
+          }
+        });
+      }
+    });
+  },
   data() {
     return {
       title: 'Tymofeiev Max - Portfolio',

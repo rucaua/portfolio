@@ -23,3 +23,12 @@
 .rainbow:hover {
     background-position: 100% 0;
 }
+
+.highlight-animation {
+    animation: highlight-pulse 2s ease-in-out;
+}
+
+@keyframes highlight-pulse {
+    0% { background-color: theme(colors.secondary) }
+    100% { background-color: transparent }
+}
