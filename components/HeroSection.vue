@@ -4,28 +4,28 @@
       <div>
         <h2 class="text-9xl font-bold drop-shadow-2xl">Welcome to My Portfolio</h2>
         <div class="flex flex-row gap-4 mt-20">
-          <NuxtLink :to="mailLink" class="btn rainbow flex items-center justify-center">
+          <a :href="mailLink" class="btn rainbow flex items-center justify-center">
             <font-awesome icon="at" size="2xl" class="mr-2"/> Mail Me
-          </NuxtLink>
-          <NuxtLink :to="phoneLink" class="btn rainbow flex items-center justify-center">
+          </a>
+          <a :href="phoneLink" class="btn rainbow flex items-center justify-center">
             <font-awesome icon="mobile-button" size="2xl" class="mr-2"/>
             Call Me
-          </NuxtLink>
+          </a>
           <TeleportAlert />
           <div
               class="border-l-4 border-secondary-bright
               text-contrast ml-4 pl-6
                flex flex-row gap-2 lg:gap-4 items-center"
               id="social">
-            <NuxtLink :to="linkedInLink" class="link" target="_blank">
+            <a :href="linkedInLink" class="link" target="_blank">
               <font-awesome icon="fa-brands fa-linkedin" size="2x"/>
-            </NuxtLink>
-            <NuxtLink :to="gitHubLink" class="link" target="_blank">
+            </a>
+            <a :href="gitHubLink" class="link" target="_blank">
               <font-awesome icon="fa-brands fa-github" size="2xl"/>
-            </NuxtLink>
-            <NuxtLink :to="devDevLink" class="link" target="_blank">
+            </a>
+            <a :href="devDevLink" class="link" target="_blank">
               <font-awesome icon="fa-brands fa-dev" size="2xl"/>
-            </NuxtLink>
+            </a>
           </div>
         </div>
       </div>
@@ -44,16 +44,11 @@ export default {
   components: {AIChat, TeleportAlert},
   data() {
     return {
-      mailLink: 'mailto::tymofeiev.m@gmail.com',
-      phoneLink: 'tel::+14168908703',
+      mailLink: 'mailto:tymofeiev.m@gmail.com',
+      phoneLink: 'tel:+14168908703',
       linkedInLink: 'https://www.linkedin.com/in/max-tymofeiev/',
       gitHubLink: 'https://github.com/rucaua/',
       devDevLink: 'https://app.daily.dev/rucaua'
-    }
-  },
-  methods: {
-    teleport() {
-      alert('🤣 Nice try! Teleportation technology still loading... Please wait another 50 years!')
     }
   }
 }
