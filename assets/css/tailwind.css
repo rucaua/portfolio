@@ -7,3 +7,6 @@
     scrollbar-color: theme(colors.contrast) theme(colors.secondary);
 }
 
+.btn {
+    @apply px-4 py-2 text-white rounded bg-secondary hover:bg-secondary-bright active:bg-alternative transition
+}
