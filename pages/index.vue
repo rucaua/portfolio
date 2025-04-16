@@ -6,7 +6,7 @@
       <Meta name="og:title" :content="title" />
       <Meta name="og:description" :content="description" />
       <Meta name="og:type" content="website" />
-      <Meta name="og:url" :content="useRequestURL()" />
+      <Meta name="og:url" :content="currentUrl" />
     </Head>
     <hero-section />
     <key-features-section :data="keyFeaturesData" />
@@ -26,7 +26,8 @@ export default {
     return {
       keyFeaturesData: runtimeConfig.public.keyFeatures,
       jobsData: runtimeConfig.public.jobs,
-      techData: runtimeConfig.public.techList
+      techData: runtimeConfig.public.techList,
+      currentUrl: useRequestURL()?.hash || ''
     }
   },
   data() {

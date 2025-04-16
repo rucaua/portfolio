@@ -6,7 +6,7 @@
       <Meta name="og:title" :content="title" />
       <Meta name="og:description" :content="description" />
       <Meta name="og:type" content="website" />
-      <Meta name="og:url" :content="useRequestURL()" />
+      <Meta name="og:url" :content="currentUrl" />
     </Head>
     <div class="mb-20">
       <div class="flex items-center justify-between w-full">
@@ -36,7 +36,8 @@ export default {
     return {
       pdfSrc: '/Full-Stack-Dev-Maksym-Tymofeiev.pdf',
       title: 'Resume - Maksym Tymofeiev | Full-Stack Developer',
-      description: 'View the professional resume of Maksym Tymofeiev, a Full-Stack Developer with expertise in modern web technologies.'
+      description: 'View the professional resume of Maksym Tymofeiev, a Full-Stack Developer with expertise in modern web technologies.',
+      currentUrl: useRequestURL()?.hash || ''
     }
   }
 }
