@@ -1,48 +1,45 @@
 <template>
-  <div id="chat">
-    <div class="mt-10 max-w-3xl mx-auto">
-      <h1 class="text-4xl font-bold mb-8">Chat with My AI Assistant</h1>
-
+  <div id="chat" class="pt-10 transition-all duration-500 ease-in-out" :class="wasActivated ? 'w-3/4' : 'w-2/4'">
+    <div class="max-w-3xl mx-auto p-10 shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-secondary/50 rounded-3xl">
+      <h2 class="text-4xl font-bold mb-8">Chat with My AI Assistant</h2>
       <div class="mb-4 p-0 overflow-hidden">
-        <div class="bg-primary p-4 text-white">
-          <h3 class="font-medium">AI Assistant Chat</h3>
-        </div>
-
-        <div ref="chatContainer" class="p-4 flex flex-col gap-4 max-h-[400px] overflow-y-auto">
+        <div ref="chatContainer" class="p-4 flex flex-col gap-4 max-h-[400px] overflow-y-auto custom-scrollbar">
           <div
               v-for="(message, i) in displayMessages"
               :key="i"
               :class="[
-                'p-3 rounded-lg max-w-[80%]',
+                'p-3 rounded-lg max-w-[80%] bg-secondary',
                 message.role === 'assistant'
-                  ? 'bg-gray-800 self-start'
-                  : 'bg-gray-700 text-white self-end'
+                  ? ' self-start'
+                  : 'self-end'
               ]"
           >
             {{ message.content }}
           </div>
-          <div v-if="loading" class="self-start p-3 bg-gray-800 rounded-lg text-white">
+          <div v-if="loading" class="self-start p-3 bg-secondary rounded-lg">
               <span class="loading-dots">
                 Thinking<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
               </span>
           </div>
         </div>
 
-        <div class="p-4 border-t border-gray-200 dark:border-gray-700">
+        <div class="p-4 border-t border-secondary">
           <form @submit.prevent="sendMessage" class="flex gap-2">
             <textarea
                 v-model="newMessage"
                 placeholder="Type your message..."
-                class="flex-1 border border-teal-700 rounded-lg p-2 text-sky-950"
+                class="flex-1 border rounded-lg p-2 text-secondary"
                 :rows="1"
                 :disabled="loading"
                 @keydown="handleKeyDown"
             />
             <button
                 type="submit"
-                class="bg-teal-800 hover:bg-teal-900 text-white px-4 py-2 rounded-lg"
+                class="bg-secondary text-white px-4 py-2 rounded-lg"
                 :disabled="!newMessage.trim() || loading"
-            ><font-awesome icon="paper-plane"/></button>
+            >
+              <font-awesome icon="paper-plane"/>
+            </button>
           </form>
         </div>
       </div>
@@ -55,22 +52,23 @@ export default {
   name: 'AIChat',
   data() {
     return {
-      messages: [
+      displayMessages: [
         {
           role: 'assistant',
           content: "Hi there! I'm the AI assistant. How can I help you learn more about my experience, skills, or projects today?"
         }
       ],
-      displayMessages: [],
       newMessage: '',
       loading: false,
       threadId: null
     }
   },
+  computed: {
+    wasActivated() {
+      return this.displayMessages.length > 1;
+    }
+  },
   mounted() {
-    // Initialize display messages with welcome message
-    this.displayMessages = [...this.messages];
-
     // Try to restore thread ID from localStorage
     this.threadId = localStorage.getItem('chat_thread_id');
 
@@ -88,14 +86,17 @@ export default {
           this.sendMessage();
         }
       }
-      // If Shift+Enter, let the default behavior happen (new line)
     },
 
+    /**
+     *
+     * Sends a message to the AI assistant API, handles the response,
+     * and updates the chat thread accordingly.
+     * TODO implement streaming instead of waiting for the response to be ready
+     */
     async sendMessage() {
-      console.log('sendMessage');
       if (!this.newMessage.trim()) return;
-      console.log('sendMessage2');
-      // Add user message to display
+
       this.displayMessages.push({
         role: 'user',
         content: this.newMessage
@@ -111,7 +112,6 @@ export default {
       this.loading = true;
 
       try {
-        console.log('sendMessage3');
         const response = await fetch('/api/assistant', {
           method: 'POST',
           headers: {
@@ -128,7 +128,6 @@ export default {
         }
 
         const data = await response.json();
-        console.log('API response data:', data);
 
         // Store the thread ID for future conversations
         this.threadId = data.thread_id;
@@ -140,10 +139,7 @@ export default {
           const assistantMessages = data.messages.filter(msg => msg.role === 'assistant');
           if (assistantMessages.length > 0) {
             const lastMessage = assistantMessages[0];
-            this.displayMessages.push({
-              role: 'assistant',
-              content: lastMessage.content[0]?.text?.value || "I couldn't generate a response."
-            });
+            this.typeMessage(lastMessage.content[0]?.text?.value || "I couldn't generate a response.");
           }
         }
 
@@ -152,8 +148,6 @@ export default {
           this.scrollToBottom();
         });
       } catch (error) {
-        console.error('Error sending message:', error);
-        // Display error message to user
         this.displayMessages.push({
           role: 'assistant',
           content: "Sorry, I encountered an error. Please try again later."
@@ -161,6 +155,30 @@ export default {
       } finally {
         this.loading = false;
       }
+    },
+
+    /**
+     * Animates the assistant's response to appear as if it's being typed
+     * TODO must be removed after switching to get stream from openAI
+     * @param text
+     */
+    typeMessage(text) {
+      const key = this.displayMessages.length;
+      this.displayMessages.push({
+        role: 'assistant',
+        content: '',
+      });
+
+      let currentIndex = 0;
+      const interval = setInterval(() => {
+        if (currentIndex < text.length) {
+          this.displayMessages[key].content += text[currentIndex];
+          currentIndex++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 20);
+
     },
 
     scrollToBottom() {

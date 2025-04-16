@@ -1,3 +1,6 @@
+/**
+ * TODO implement streaming instead of waiting for the response to be ready
+ */
 export default defineEventHandler(async (event) => {
 
     const {openaiApiKey, openaiAssistantId} = useRuntimeConfig(event)

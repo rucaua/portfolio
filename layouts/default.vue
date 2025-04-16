@@ -1,11 +1,11 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-sky-950 text-sky-100">
+  <div class="min-h-screen flex flex-col bg-main text-contrast">
     <!-- Site Header -->
     <header class="border-b py-4">
       <div class="flex items-center justify-between container mx-auto">
         <div>
           <!-- Logo/Brand -->
-          <NuxtLink to="/" class="font-bold text-xl"><h1>{{title}}</h1></NuxtLink>
+          <NuxtLink to="/" class="font-bold text-2xl"><h1>{{title}}</h1></NuxtLink>
         </div>
 
         <div class="flex items-center">
