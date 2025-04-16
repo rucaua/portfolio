@@ -14,12 +14,11 @@
         class="fixed inset-0 bg-black/70 z-50 flex justify-center items-center"
     >
       <div
-          class="w-full max-w-md p-8 rounded-2xl text-center text-contrast shadow-xl transition-all duration-300 bg-gradient-to-r from-secondary to-alternative">
+          class="w-full max-w-2xl p-8 rounded-2xl text-center text-contrast shadow-xl transition-all duration-300 bg-gradient-to-r from-secondary to-alternative">
         <span class="text-4xl block mb-4">{{ alertIcon }}</span>
         <h3 class="text-2xl font-bold mb-2">{{ alertTitle }}</h3>
-        <p class="mb-6 text-xl">{{ alertMessage }}</p>
+        <p class="my-6 text-xl whitespace-pre-line text-left">{{ alertMessage }}</p>
 
-        <!-- Teleport animation -->
         <div class="h-1 relative rounded-full overflow-hidden mb-6">
           <div class="w-full h-full bg-white/20 absolute"></div>
           <div class="h-full rainbow rounded-full teleport-animation"></div>
@@ -51,7 +50,7 @@ export default {
     startTeleportation() {
       this.alertVisible = true
       this.alertTitle = 'Teleportation Initiated'
-      this.alertMessage = 'Preparing quantum tunneling to my location!'
+      this.alertMessage = 'Preparing quantum tunneling to your location!'
       this.alertIcon = '🌀'
       this.buttonText = 'Cancel Teleportation'
       this.alertClass = ''
@@ -61,10 +60,9 @@ export default {
     },
 
     async teleportPhases() {
-      // Phase 1: Initial preparation
-      await this.delay(2000)
 
-      // Phase 2: Checking location - now actually requesting browser permission
+      await this.delay(5000)
+
       this.updateAlert(
           'Checking your location',
           'Requesting permission to access your coordinates...',
@@ -134,16 +132,6 @@ export default {
       this.buttonText = 'Close'
     },
 
-    handlePermission(allowed) {
-      this.teleportationAllowed = allowed
-
-      if (allowed) {
-        this.continueWithTeleportation()
-      } else {
-        this.showErrorAlert()
-      }
-    },
-
     async continueWithTeleportation() {
 
       this.updateAlert(
@@ -152,29 +140,30 @@ export default {
            ${this.formatCoordinates(this.userLocation.latitude, this.userLocation.longitude)}.`,
           '🔍'
       )
-      await this.delay(3000)
+      await this.delay()
 
       this.updateAlert(
           'Building tunnel',
           'Preparing a critical mass of node_modules folder to rip through space-time...',
           '⚛️'
       )
-      await this.delay(3000)
+      await this.delay()
 
       this.updateAlert(
-          'Opening the nearest commercial teleport',
-          'Molecular dissolution begins in 3...2...1...',
+          'Preparing backup',
+          'Calculating the positions of each atom in your body.\n' +
+          'Please do not move or breathe.',
           '⏱️'
       )
-      await this.delay(3000)
+      await this.delay()
 
-      this.alertClass = 'alert-success';
       this.updateAlert(
-          'Little delay',
-          "Sorry for the delay!!! Commercial teleport will be invented just in: \n",
-          '⏳'
-      );
-      this.buttonText = 'Cancel';
+          'Almost done',
+          'All that remains is to disintegrate your body.\n' +
+          'You can breathe, but please do not move.',
+          '🧬'
+      )
+      await this.delay()
 
       // Start countdown timer
       this.startFutureCountdown();
@@ -207,10 +196,9 @@ export default {
         // Calculate time components
         const timeLeft = this.calculateTimeRemaining(timeDiff);
 
-        // Update the message
         this.updateAlert(
-            'Sorry for the delay!',
-            "Sorry for the delay!!! Commercial teleport will be invented just in: \\n" + `${timeLeft.years} years, ${timeLeft.months} months, ${timeLeft.days} days, ${timeLeft.hours} hours, ${timeLeft.minutes} minutes, and ${timeLeft.seconds} seconds on March 26, 2082.`,
+            'Delay!',
+            `Sorry for the delay!!!\n\nCommercial teleport will be invented just in:\n\n${timeLeft.years} years\n${timeLeft.months} months\n${timeLeft.days} days\n${timeLeft.hours} hours\n${timeLeft.minutes} minutes\n${timeLeft.seconds} seconds\n`,
             '⏳'
         );
       }, 1000);
@@ -278,8 +266,8 @@ export default {
     },
 
     // Helper method for creating delays
-    delay(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms))
+    delay() {
+      return new Promise(resolve => setTimeout(resolve, 5000))
     }
   }
 }
@@ -296,6 +284,6 @@ export default {
 }
 
 .teleport-animation {
-  animation: teleport 3s infinite;
+  animation: teleport 5s infinite;
 }
 </style>
