@@ -11,9 +11,9 @@
     <div class="mb-20">
       <div class="flex items-center justify-between w-full">
         <h2 class="text-4xl font-bold">{{ title }}</h2>
-        <NuxtLink :to="pdfSrc" target="_blank" download class="btn">
+        <a :href="pdfSrc" target="_blank" download class="btn">
           Download Resume
-        </NuxtLink>
+        </a>
       </div>
     </div>
 
