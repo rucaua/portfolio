@@ -201,7 +201,9 @@ export default defineNuxtConfig({
                 'mobile-screen',
                 'pen-ruler',
                 'code',
-                'server'
+                'server',
+                'home',
+                'chevron-right'
             ],
             brands: [
                 'php',

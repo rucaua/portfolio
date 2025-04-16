@@ -11,6 +11,14 @@
         <div class="flex items-center">
           <!-- Navigation -->
           <nav class="hidden md:block">
+            <ul class="flex gap-4">
+              <li>
+                <NuxtLink to="/" class="px-3 py-2 hover:text-primary transition">Home</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/resume" class="px-3 py-2 hover:text-primary transition">Resume</NuxtLink>
+              </li>
+            </ul>
           </nav>
 
         </div>
@@ -20,6 +28,8 @@
       <div v-if="isMenuOpen" class="md:hidden py-4">
       </div>
     </header>
+
+    <Breadcrumbs />
 
     <!-- Main Content -->
     <main class="flex-grow">
@@ -39,8 +49,11 @@
 
 <script>
 
+import Breadcrumbs from "~/components/Breadcrumbs.vue";
+
 export default {
   name: 'DefaultLayout',
+  components: {Breadcrumbs},
   setup() {
     const runtimeConfig = useRuntimeConfig()
     return {title: runtimeConfig.public.fullName}
