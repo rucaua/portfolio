@@ -1,7 +1,7 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-dark text-contrast text-xl">
+  <div class="min-h-screen flex flex-col bg-dark text-contrast text-xl pt-20">
     <!-- Site Header -->
-    <header class="border-b py-4">
+    <header class="fixed top-0 left-0 right-0 z-10 border-b py-4 bg-opacity-90 backdrop-blur-sm shadow-md">
       <div class="flex items-center justify-between container mx-auto">
         <div>
           <!-- Logo/Brand -->
