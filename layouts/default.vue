@@ -37,14 +37,18 @@
       <slot/>
     </main>
 
-    <footer class="border-t py-14 text-xl">
-      <div class="flex flex-row justify-between items-center container mx-auto gap-5">
-        <div class="w-1/3">© {{ new Date().getFullYear() }} Tymofeiev Max (Maksym)</div>
-        <div>
+    <footer class="border-t py-14 text-xl font-light w-full">
+      <div class="container flex flex-row items-center mx-auto">
+        <div class="relative pr-20 min-w-60">
+          <p>© {{ new Date().getFullYear() }}</p>
+          <p>Tymofeiev Max</p>
+          <div class="absolute top-0 bottom-0 right-0 w-[6px] bg-gradient-to-b from-main to-secondary"></div>
+        </div>
+        <div class="pl-20">
           <p>This site was created by Max Tymofeiev with VueJS (Nuxt.js) + Tailwind CSS and deployed via AWS Amplify. If
-          you need something similar, I have shared it on <a href="https://github.com/rucaua/portfolio" class="link"
-                                                             target="_blank">GitHub</a>, so feel free to use it. But
-          please don't forget to add a star.</p>
+            you need something similar, I have shared it on <a href="https://github.com/rucaua/portfolio" class="link"
+                                                               target="_blank">GitHub</a>, so feel free to use it. But
+            please don't forget to add a star.</p>
         </div>
       </div>
     </footer>
