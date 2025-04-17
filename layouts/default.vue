@@ -5,7 +5,7 @@
       <div class="flex items-center justify-between container mx-auto">
         <div>
           <!-- Logo/Brand -->
-          <NuxtLink to="/" class="font-bold text-2xl"><h1>{{title}}</h1></NuxtLink>
+          <NuxtLink to="/" class="font-bold text-2xl"><h1>{{ title }}</h1></NuxtLink>
         </div>
 
         <div class="flex items-center">
@@ -32,18 +32,20 @@
       </div>
     </header>
 
-    <Breadcrumbs />
+    <Breadcrumbs/>
 
-    <!-- Main Content -->
     <main class="flex-grow">
       <slot/>
     </main>
 
-    <!-- Site Footer -->
-    <footer class="border-t py-8">
-      <div class="flex flex-col md:flex-row justify-between items-center">
+    <footer class="border-t py-14 text-xl">
+      <div class="flex flex-row justify-between items-center container mx-auto gap-5">
+        <div class="w-1/3">© {{ new Date().getFullYear() }} Tymofeiev Max (Maksym)</div>
         <div>
-          <p>© {{ new Date().getFullYear() }} Your Name</p>
+          <p>This site was created by Max Tymofeiev with VueJS (Nuxt.js) + Tailwind CSS and deployed via AWS Amplify. If
+          you need something similar, I have shared it on <a href="https://github.com/rucaua/portfolio" class="link"
+                                                             target="_blank">GitHub</a>, so feel free to use it. But
+          please don't forget to add a star.</p>
         </div>
       </div>
     </footer>
@@ -66,7 +68,6 @@ export default {
       isMenuOpen: false
     }
   },
-  methods: {
-  }
+  methods: {}
 }
 </script>
