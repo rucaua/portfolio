@@ -3,7 +3,7 @@
     <nav aria-label="Breadcrumb" class="flex items-center text-sm font-medium">
       <NuxtLink
           to="/"
-          class="text-secondary-bright hover:text-secondary transition-colors duration-200 flex items-center"
+          class="text-main hover:text-main-dark transition-colors duration-200 flex items-center"
       >
         <font-awesome icon="home" class="mr-2" />
         Home

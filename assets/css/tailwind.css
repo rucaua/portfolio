@@ -4,23 +4,23 @@
 
 .custom-scrollbar{
     scrollbar-width: thin;
-    scrollbar-color: theme(colors.contrast) theme(colors.secondary);
+    scrollbar-color: theme(colors.contrast) theme(colors.main-dark);
 }
 
 .btn {
-    @apply px-4 py-2 text-white rounded-md bg-secondary hover:bg-secondary-bright active:bg-alternative transition
+    @apply px-4 py-2 text-white rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
 }
 
 .btn-light {
-    @apply px-4 py-2 text-white rounded-md bg-secondary hover:bg-secondary-bright active:bg-alternative transition
+    @apply px-4 py-2 text-white rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
 }
 
 .link {
-    @apply text-secondary-bright hover:text-secondary underline
+    @apply text-main hover:text-main-dark underline
 }
 
 .rainbow {
-    @apply relative bg-gradient-to-r from-alternative-bright via-secondary-bright to-alternative-bright bg-[length:200%_100%] transition-all duration-500 ease-in-out;
+    @apply relative bg-gradient-to-r from-secondary via-main to-secondary bg-[length:200%_100%] transition-all duration-500 ease-in-out;
     background-position: 0 0;
 }
 
@@ -32,7 +32,9 @@
     animation: highlight-pulse 2s ease-in-out;
 }
 
+.bg-dark-diagonal { @apply bg-gradient-to-br from-gray-800 to-main-dark}
+
 @keyframes highlight-pulse {
-    0% { background-color: theme(colors.secondary) }
+    0% { background-color: theme(colors.main-dark) }
     100% { background-color: transparent }
 }

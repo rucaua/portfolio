@@ -1,14 +1,14 @@
 <template>
-  <div id="chat" class="pt-10 transition-all duration-500 ease-in-out" :class="wasActivated ? 'w-3/4' : 'w-2/4'">
-    <div class="max-w-3xl mx-auto p-10 shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-secondary/50 rounded-3xl">
+  <div id="chat" class="pt-10 px-20 transition-all duration-500 ease-in-out">
+    <div class="max-w-3xl mx-auto p-10 bg-dark-diagonal shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-main-dark/50 rounded-3xl">
       <h2 class="text-4xl font-bold mb-8">Chat with My AI Assistant</h2>
       <div class="mb-4 p-0 overflow-hidden">
-        <div ref="chatContainer" class="p-4 flex flex-col gap-4 max-h-[400px] overflow-y-auto custom-scrollbar">
+        <div ref="chatContainer" class="p-4 flex flex-col gap-4 h-[400px] overflow-y-auto custom-scrollbar">
           <div
               v-for="(message, i) in displayMessages"
               :key="i"
               :class="[
-                'p-3 rounded-lg max-w-[80%] bg-secondary',
+                'p-3 rounded-lg max-w-[80%] bg-dark/50',
                 message.role === 'assistant'
                   ? ' self-start'
                   : 'self-end'
@@ -16,26 +16,26 @@
           >
             {{ message.content }}
           </div>
-          <div v-if="loading" class="self-start p-3 bg-secondary rounded-lg">
+          <div v-if="loading" class="self-start p-3 bg-main-dark rounded-lg">
               <span class="loading-dots">
                 Thinking<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
               </span>
           </div>
         </div>
 
-        <div class="p-4 border-t border-secondary">
+        <div class="p-4 border-t border-main-dark">
           <form @submit.prevent="sendMessage" class="flex gap-2">
             <textarea
                 v-model="newMessage"
                 placeholder="Type your message..."
-                class="flex-1 border rounded-lg p-2 text-secondary"
+                class="flex-1 border rounded-lg p-2 text-main-dark"
                 :rows="1"
                 :disabled="loading"
                 @keydown="handleKeyDown"
             />
             <button
                 type="submit"
-                class="bg-secondary text-white px-4 py-2 rounded-lg"
+                class="bg-main-dark text-white px-4 py-2 rounded-lg"
                 :disabled="!newMessage.trim() || loading"
             >
               <font-awesome icon="paper-plane"/>

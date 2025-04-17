@@ -5,20 +5,20 @@
 
       <div class="timeline relative text-grey">
         <!-- Timeline line -->
-        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-secondary"></div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-main-dark"></div>
 
         <!-- Timeline items -->
         <div v-for="(job, index) in data" :key="index"
              class="timeline-item relative mb-16">
           <!-- Date indicator -->
           <div
-              class="absolute left-1/2 transform -translate-x-1/2 -mt-3 w-8 h-8 rounded-full bg-secondary flex items-center justify-center z-10">
-            <span class="bg-secondary font-bold text-sm">{{ index + 1 }}</span>
+              class="absolute left-1/2 transform -translate-x-1/2 -mt-3 w-8 h-8 rounded-full bg-main-dark flex items-center justify-center z-10">
+            <span class="bg-main-dark font-bold text-sm">{{ index + 1 }}</span>
           </div>
 
           <!-- Content box -->
           <div :class="[
-            'bg-secondary rounded-lg shadow-lg p-6 w-5/12',
+            'bg-main-dark rounded-lg shadow-lg p-6 w-5/12',
             index % 2 === 0 ? 'ml-auto' : 'mr-auto'
           ]">
             <div class="mb-2 flex justify-between items-center ">

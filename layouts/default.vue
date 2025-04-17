@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-main text-contrast text-xl">
+  <div class="min-h-screen flex flex-col bg-dark text-contrast text-xl">
     <!-- Site Header -->
     <header class="border-b py-4">
       <div class="flex items-center justify-between container mx-auto">

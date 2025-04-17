@@ -7,14 +7,14 @@
         </div>
         <div>
           <div class="flex items-center mb-2 ">
-          <span class="flex items-center justify-center text-secondary-bright mr-2">
+          <span class="flex items-center justify-center text-main mr-2">
             <font-awesome :icon="item.icon" size="2x"/>
           </span>
             <h2 class="ml-2 text-lg font-bold text-contrast">{{ item.name }}</h2>
           </div>
           <div class="bg-grey rounded-full w-full h-2.5 my-5">
             <div
-                class="h-2.5 bg-gradient-to-r from-alternative-bright to-secondary-bright rounded-full"
+                class="h-2.5 bg-gradient-to-r from-secondary to-main rounded-full"
                 :style="{
                 width: item.progress + '%'
               }"/>
@@ -24,7 +24,7 @@
             <button
                 v-if="item.text.length > 150"
                 @click="toggleExpand(item.name)"
-                class="text-secondary-bright hover:text-contrast text-sm mt-1 focus:outline-none"
+                class="text-main hover:text-contrast text-sm mt-1 focus:outline-none"
             >
               {{ isExpanded[item.name] ? 'Show less' : 'Show more' }}
             </button>

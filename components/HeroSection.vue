@@ -1,19 +1,20 @@
 <template>
   <section class="container my-28" id="contact">
     <div class="flex flex-col lg:flex-row items-center">
-      <div>
+      <div class="w-1/2">
         <h2 class="text-9xl font-bold drop-shadow-2xl">Welcome to My Portfolio</h2>
         <div class="flex flex-row gap-4 my-10 py-10 justify-start items-center rounded" data-highlight="contact">
           <a :href="mailLink" class="btn rainbow flex items-center justify-center">
-            <font-awesome icon="at" size="xs" class="mr-2"/> Mail Me
+            <font-awesome icon="at" size="xs" class="mr-2"/>
+            Mail Me
           </a>
           <a :href="phoneLink" class="btn rainbow flex items-center justify-center">
             <font-awesome size="xs" :icon="['fas', 'mobile-screen-button']" class="mr-2"/>
             Call Me
           </a>
-          <TeleportAlert />
+          <TeleportAlert/>
           <div
-              class="border-l-4 border-secondary-bright
+              class="border-l-4 border-main
               text-contrast ml-4 pl-6
                flex flex-row gap-2 lg:gap-4 items-center"
               id="social">
@@ -29,8 +30,9 @@
           </div>
         </div>
       </div>
-
-      <AIChat/>
+      <div class="w-1/2">
+        <AIChat />
+      </div>
     </div>
   </section>
 </template>

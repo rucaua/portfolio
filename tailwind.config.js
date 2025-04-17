@@ -5,13 +5,13 @@ export default {
     extend: {
       /* @see https://v3.tailwindcss.com/docs/customizing-colors */
       colors: {
-        main: colors.zinc["950"],
+        main: colors.teal["500"],
+        'main-dark': colors.teal["950"],
+        secondary: colors.purple["500"],
+        dark: colors.zinc["900"],
         contrast: colors.zinc["200"],
         grey: colors.zinc["500"],
-        secondary: colors.teal["950"],
-        'secondary-bright': colors.teal["500"],
         alternative: colors.blue["950"],
-        'alternative-bright': colors.purple["500"],
       }
     },
   },
