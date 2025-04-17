@@ -1,7 +1,7 @@
 <template>
   <div>
     <button
-        class="btn rainbow flex items-center justify-center"
+        class="btn rainbow inline"
         @click="startTeleportation"
     >
       <font-awesome icon="object-ungroup" size="xs" class="mr-2"/>

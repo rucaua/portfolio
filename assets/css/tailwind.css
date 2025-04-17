@@ -39,6 +39,10 @@ body {
     animation: highlight-pulse 2s ease-in-out;
 }
 
+.inline {
+    @apply flex items-center justify-center whitespace-nowrap;
+}
+
 .bg-dark-diagonal { @apply bg-gradient-to-br from-gray-800 to-main-dark}
 
 @keyframes highlight-pulse {
