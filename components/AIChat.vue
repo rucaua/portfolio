@@ -17,19 +17,19 @@
           >
             {{ message.content }}
           </div>
-          <div v-if="loading" class="self-start p-3 bg-main-dark rounded-lg">
+          <div v-if="loading" class="self-start p-3 bg-dark/50 rounded-lg">
               <span class="loading-dots">
                 Thinking<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
               </span>
           </div>
         </div>
 
-        <div class="p-4 border-t border-main-dark">
+        <div class="px-4 pt-10 border-t-4 border-dark/50">
           <form @submit.prevent="sendMessage" class="flex gap-2">
             <textarea
                 v-model="newMessage"
                 placeholder="Type your message..."
-                class="flex-1 border rounded-lg p-2 text-main-dark"
+                class="flex-1 border rounded-lg p-2 text-dark resize-none focus:outline-none focus:ring-0 focus:border-main-dark"
                 :rows="1"
                 :disabled="loading"
                 @keydown="handleKeyDown"
