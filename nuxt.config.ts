@@ -204,9 +204,9 @@ export default defineNuxtConfig({
                 'server',
                 'home',
                 'chevron-right',
-                'mobile-button',
+                'mobile-screen-button',
                 'at',
-                'door-open'
+                'object-ungroup'
             ],
             brands: [
                 'php',

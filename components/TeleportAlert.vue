@@ -4,7 +4,7 @@
         class="btn rainbow flex items-center justify-center"
         @click="startTeleportation"
     >
-      <font-awesome icon="door-open" size="2xl" class="mr-2"/>
+      <font-awesome icon="object-ungroup" size="xs" class="mr-2"/>
       Teleport to Me
     </button>
 
