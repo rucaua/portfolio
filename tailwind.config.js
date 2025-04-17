@@ -11,7 +11,7 @@ export default {
                 secondary: colors.purple["500"],
                 dark: colors.zinc["900"],
                 contrast: colors.zinc["200"],
-                grey: colors.zinc["500"],
+                grey: colors.zinc["300"],
                 alternative: colors.blue["950"],
             },
             fontFamily: {

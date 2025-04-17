@@ -48,9 +48,9 @@ export default {
       description: 'Professional portfolio showcasing Tymofeiev Max (Maksym) work, skills, and experience',
       keyFeatures: [
         {title: '15+', subTitle: 'years of experience'},
-        {title: 'SaaS', subTitle: 'solutions for business'},
-        {title: 'Senior', subTitle: 'full stack developer'},
         {title: 'AI', subTitle: 'generative model'},
+        {title: 'SaaS', subTitle: 'solutions for business'},
+        {title: 'Senior', subTitle: 'full stack developer'}
       ],
       jobsData: [
         {
