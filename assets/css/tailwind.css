@@ -11,7 +11,7 @@ body {
 
 .custom-scrollbar{
     scrollbar-width: thin;
-    scrollbar-color: theme(colors.contrast) theme(colors.main-dark);
+    scrollbar-color: theme(colors.grey) theme(colors.main-dark);
 }
 
 .btn {

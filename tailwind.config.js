@@ -10,7 +10,6 @@ export default {
                 'main-dark': colors.teal["950"],
                 secondary: colors.purple["500"],
                 dark: colors.zinc["900"],
-                contrast: colors.zinc["200"],
                 grey: colors.zinc["300"],
                 alternative: colors.blue["950"],
             },

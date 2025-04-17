@@ -14,7 +14,7 @@
         class="fixed inset-0 bg-black/70 z-50 flex justify-center items-center"
     >
       <div
-          class="w-full max-w-2xl p-8 rounded-2xl text-center text-contrast shadow-xl transition-all duration-300 bg-gradient-to-r from-main-dark to-alternative">
+          class="w-full max-w-2xl p-8 rounded-2xl text-center text-grey shadow-xl transition-all duration-300 bg-gradient-to-r from-main-dark to-alternative">
         <span class="text-4xl block mb-4">{{ alertIcon }}</span>
         <h3 class="text-2xl font-bold mb-2">{{ alertTitle }}</h3>
         <p class="my-6 text-xl whitespace-pre-line text-left">{{ alertMessage }}</p>

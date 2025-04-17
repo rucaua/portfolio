@@ -16,7 +16,7 @@
             <TeleportAlert/>
             <div
                 class="border-l-4 border-main
-              text-contrast ml-4 pl-6
+              text-grey ml-4 pl-6
                flex flex-row gap-2 lg:gap-4 items-center"
                 id="social">
               <a :href="linkedInLink" class="link" target="_blank">

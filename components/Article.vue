@@ -1,5 +1,5 @@
 <template>
-  <article class="bg-contrast rounded-xl flex flex-col justify-between text-grey h-full">
+  <article class="bg-grey rounded-xl flex flex-col justify-between text-grey h-full">
     <div class="relative">
         <img :src="img" alt="Personal Website" class="w-full h-48 object-cover bg-gradient-to-r from-main-dark to-alternative"/>
         <h3 class="absolute bottom-3 left-3  text-xl font-bold p-3 rounded" :class="inverseTitle ? 'text-dark bg-white/60' : 'text-white bg-dark/90'">{{title}}</h3>
