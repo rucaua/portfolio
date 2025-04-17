@@ -10,7 +10,7 @@ export default {
                 'main-dark': colors.teal["950"],
                 secondary: colors.purple["500"],
                 dark: colors.zinc["900"],
-                grey: colors.zinc["300"],
+                grey: colors.zinc["200"],
                 alternative: colors.blue["950"],
             },
             fontFamily: {
