@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-main text-contrast">
+  <div class="min-h-screen flex flex-col bg-main text-contrast text-xl">
     <!-- Site Header -->
     <header class="border-b py-4">
       <div class="flex items-center justify-between container mx-auto">
@@ -17,6 +17,9 @@
               </li>
               <li>
                 <NuxtLink to="/resume" class="px-3 py-2 hover:text-primary transition">Resume</NuxtLink>
+              </li>
+              <li>
+                <NuxtLink to="/portfolio" class="px-3 py-2 hover:text-primary transition">Portfolio</NuxtLink>
               </li>
               <li>
                 <NuxtLink to="/#contact" class="px-3 py-2 hover:text-primary transition">Contacts</NuxtLink>
