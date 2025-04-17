@@ -19,8 +19,8 @@ export default {
                 'roboto': ['Roboto', 'sans-serif']
             },
             fontSize: {
-                '9xl': ['12rem', {
-                    lineHeight: '14rem',
+                '9xl': ['10rem', {
+                    lineHeight: '11rem',
                     letterSpacing: '0',
                     fontWeight: '500',
                 }]
