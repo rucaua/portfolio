@@ -11,7 +11,6 @@
     <hero-section />
     <key-features-section :data="keyFeatures" />
     <tech-stack-section :data="techData"/>
-    <time-line-section :data="jobsData"></time-line-section>
   </div>
 </template>
 
