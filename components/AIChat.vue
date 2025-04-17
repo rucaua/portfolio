@@ -1,6 +1,7 @@
 <template>
   <div id="chat">
-    <div class="max-w-3xl mx-auto p-10 bg-dark-diagonal shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-main-dark/50 rounded-3xl">
+    <div
+        class="max-w-3xl mx-auto p-10 bg-dark-diagonal shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-main-dark/50 rounded-3xl">
       <h2 class="text-4xl font-bold mb-8">Chat with My AI Assistant</h2>
       <div class="mb-4 p-0 overflow-hidden">
         <div ref="chatContainer" class="p-4 flex flex-col gap-4 h-[400px] overflow-y-auto custom-scrollbar">
@@ -63,16 +64,8 @@ export default {
       threadId: null
     }
   },
-  computed: {
-    wasActivated() {
-      return this.displayMessages.length > 1;
-    }
-  },
   mounted() {
-    // Try to restore thread ID from localStorage
     this.threadId = localStorage.getItem('chat_thread_id');
-
-    // Scroll to bottom on initial load
     this.$nextTick(() => {
       this.scrollToBottom();
     });
@@ -102,8 +95,7 @@ export default {
         content: this.newMessage
       });
 
-      // Scroll to bottom when new message is added
-      this.$nextTick(() => {
+      await this.$nextTick(() => {
         this.scrollToBottom();
       });
 
@@ -124,18 +116,15 @@ export default {
         });
 
         if (!response.ok) {
-          throw new Error(`API request failed with status ${response.status}`);
+          console.error(`API request failed with status ${response.status}`);
         }
 
         const data = await response.json();
 
-        // Store the thread ID for future conversations
         this.threadId = data.thread_id;
         localStorage.setItem('chat_thread_id', this.threadId);
 
-        // Add the AI response to the messages
         if (data.messages && data.messages.length > 0) {
-          // Find the most recent assistant message
           const assistantMessages = data.messages.filter(msg => msg.role === 'assistant');
           if (assistantMessages.length > 0) {
             const lastMessage = assistantMessages[0];
@@ -143,8 +132,7 @@ export default {
           }
         }
 
-        // Scroll to bottom after receiving response
-        this.$nextTick(() => {
+        await this.$nextTick(() => {
           this.scrollToBottom();
         });
       } catch (error) {
