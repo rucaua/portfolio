@@ -11,14 +11,24 @@
     <div class="mb-20">
       <div class="flex flex-col w-full">
         <h2 class="text-4xl font-bold">My works and projects</h2>
-        <div class="my-20 text-2xl">
-          <p>Unfortunately, as I primarily work with SaaS solutions, I don't have many projects that are accessible via
-            the web. However, I do have a couple of personal projects that you can view and try out.</p>
+        <div class="my-20">
+          <p class="pb-5">Throughout my 15+ year career as a full-stack developer, I've had the opportunity to work on
+            numerous
+            projects. While most were web-based SaaS solutions, my experience extends far beyond that. I've worked with
+            an extensive range of web, mobile, and desktop applications. This included running my own electronics
+            e-commerce store, developing travel portals, creating PortretMe (a freelance marketplace for artists),
+            building an online tender system for large industrial equipment, and many other ventures.
+          </p>
+          <p class="pb-5">Below you'll find my most recent projects with brief descriptions. If you'd like more
+            information about any
+            of my work, I'm happy to discuss the details during an in-person or online meeting, as long as it doesn't
+            conflict with any NDAs.</p>
         </div>
 
         <div class="flex flex-row flex-wrap gap-y-12">
           <div class="w-1/2 p-3">
-            <Article title="Ananas Table" :inverseTitle="true" img="/ananasTable.png" link-text="Try the Plugin"
+            <Article title="Ananas Table" :inverseTitle="true" img="/images/ananas-table.webp"
+                     link-text="Try the Plugin"
                      link-url="https://www.figma.com/community/plugin/1374168501688267750/ananas-table">
               <p>
                 A Figma plugin built with Vue.js and Figma Plugin API. It helps eliminate routine work by generating
@@ -40,7 +50,7 @@
             </Article>
           </div>
           <div class="w-1/2 p-3">
-            <Article title="My Personal Portfolio" img="/portfolio.png" link-text="View Repository"
+            <Article title="My Personal Portfolio" img="/images/portfolio.webp" link-text="View Repository"
                      link-url="https://github.com/rucaua/portfolio">
               <p>
                 My personal portfolio website built with:
@@ -63,37 +73,65 @@
             </Article>
           </div>
           <div class="w-1/2 p-3">
-            <Article title="UN1ON" img="/union1.webp" link-text="Link to company website"
+            <Article title="UN1ON" img="/images/un1on.webp" link-text="Link to company website"
                      link-url="https://union1software.com/" :inverseTitle="true">
               <p>
-                During my first 5 years in Canada, I worked on solutions for labor unions. This involved a suite of products: a SaaS CRM system built with PHP backend and JavaScript frontend, mobile applications across different platforms, and several desktop applications.
+                During my first 5 years in Canada, I worked on solutions for labor unions. This involved a suite of
+                products: a SaaS CRM system built with PHP backend and JavaScript frontend, mobile applications across
+                different platforms, and several desktop applications.
               </p>
               <p>
-                UN1ON apps provide comprehensive IT and marketing solutions for labor unions, helping them manage members, create mass email and SMS campaigns, host video conferences, and more.
+                UN1ON apps provide comprehensive IT and marketing solutions for labor unions, helping them manage
+                members, create mass email and SMS campaigns, host video conferences, and more.
               </p>
               <p>
-                I developed some services from scratch, while maintaining and enhancing others alongside team members. We tackled many interesting challenges, including upgrading a large PHP codebase to a newer version, migrating projects to modern cloud infrastructure (AWS: ECS, EC2, RDS, etc.), working with large volumes of data, handling background jobs with queues, and more.
+                I developed some services from scratch, while maintaining and enhancing others alongside team members.
+                We tackled many interesting challenges, including upgrading a large PHP codebase to a newer version,
+                migrating projects to modern cloud infrastructure (AWS: ECS, EC2, RDS, etc.), working with large volumes
+                of data, handling background jobs with queues, and more.
               </p>
               <p>
-                I'm very grateful to UN1ON for this great experience working with a diverse technology stack and alongside excellent teammates.
+                I'm very grateful to UN1ON for this great experience working with a diverse technology stack and
+                alongside excellent teammates.
               </p>
             </Article>
           </div>
           <div class="w-1/2 p-3">
-            <Article title="Carmanah Signs" img="/carmanahsign.png" link-text="Link to company website"
-                     link-url="https://carmanahsigns.com/" :inverseTitle="true">
+            <Article title="Youtube Channel" img="/images/youtube.webp" link-text="Link to My Yuotube Channel"
+                     link-url="https://www.youtube.com/@rucaua" :inverse-title="true">
               <p>
-                Carmanah Signs is a world leader in the manufacturing, installation, and maintenance of digital displays for the lottery industry. It operates as the Lottery & Gaming Division of the even larger corporation, STRATACACHE.
+                Years ago, I ran a YouTube channel about development with the YII2 framework (PHP + OOP + AR). While it's
+                less popular in North America than Laravel, the frameworks share many similarities.
               </p>
               <p>
-                I was fortunate to work with the team of professionals at Carmanah Signs on their content management and delivery system for digital displays. As a Software Developer, I also had the opportunity to develop tools for automating various company processes, including a Figma plugin and a desktop application that enables one-click deployment of products to Docker.
+                I still occasionally upload new content to the channel, which remains active with around 3,000
+                subscribers. The videos were never studio-quality productions — everything was recorded in a single
+                take. I even conducted live programming sessions!
+              </p>
+              <p>
+                The channel fostered an incredible community with a friendly, supportive atmosphere. This experience
+                demonstrates my leadership abilities, creative thinking, and skill in mentoring junior developers. Many
+                subscribers have reached out to share that they've progressed to senior developer roles and thanked me
+                for helping them take their first steps in programming — an achievement I'm particularly proud of.
               </p>
             </Article>
           </div>
-        </div>
-
-        <div class="my-20 text-2xl">
-          <p>This represents only the last five to six years of my career, focusing exclusively on my Canadian experience. Prior to this, I had over 10 years of experience in CIS countries working on diverse projects. This included running my own electronics e-commerce store, developing travel portals, creating PortretMe (a freelance marketplace for artists), building an online tender system for large industrial equipment, and many other ventures. While you may not have time to read about all of this, I'd be happy to share more details if any part of my experience interests you.</p>
+          <div class="w-1/2 p-3">
+            <Article title="Carmanah Signs" img="/images/carmanahsign.webp" link-text="Link to company website"
+                     link-url="https://carmanahsigns.com/">
+              <p>
+                Carmanah Signs is a world leader in the manufacturing, installation, and maintenance of digital displays
+                for the lottery industry. It operates as the Lottery & Gaming Division of the even larger corporation,
+                STRATACACHE.
+              </p>
+              <p>
+                I was fortunate to work with the team of professionals at Carmanah Signs on their content management and
+                delivery system for digital displays. As a Software Developer, I also had the opportunity to develop
+                tools for automating various company processes, including a Figma plugin and a desktop application that
+                enables one-click deployment of products to Docker.
+              </p>
+            </Article>
+          </div>
         </div>
       </div>
     </div>

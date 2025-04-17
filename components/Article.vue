@@ -1,17 +1,21 @@
 <template>
-  <article class="bg-grey rounded-xl flex flex-col justify-between text-grey h-full">
+  <article class="rounded-md flex flex-col justify-start text-grey h-full">
     <div class="relative">
-        <img :src="img" alt="Personal Website" class="w-full h-48 object-cover bg-gradient-to-r from-main-dark to-alternative"/>
-        <h3 class="absolute bottom-3 left-3  text-xl font-bold p-3 rounded" :class="inverseTitle ? 'text-dark bg-white/60' : 'text-white bg-dark/90'">{{title}}</h3>
-      </div>
+      <img :src="img" alt="Personal Website"
+     class="w-full h-48 object-cover object-[center_80%] bg-gradient-to-r from-main-dark to-alternative rounded-t-md"/>
+      <h3 class="absolute bottom-3 left-3  text-xl font-bold px-3 py-1 rounded-md bg-main/50"
+          :class="inverseTitle ? 'text-dark' : 'text-grey'">{{ title }}</h3>
+    </div>
+    <div class="flex flex-col justify-between h-full bg-dark-diagonal rounded-b-md">
       <div class="p-5 space-y-3 flex flex-col">
         <slot/>
       </div>
       <div class="m-6">
-        <a :href="linkUrl" class="btn rainbow">
-          {{linkText}}
+        <a :href="linkUrl" target="_blank" class="btn rainbow">
+          {{ linkText }}
         </a>
       </div>
+    </div>
   </article>
 </template>
 
