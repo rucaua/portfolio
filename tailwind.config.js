@@ -9,9 +9,9 @@ export default {
         contrast: colors.zinc["200"],
         grey: colors.zinc["500"],
         secondary: colors.teal["950"],
-        'secondary-bright': colors.emerald["700"],
+        'secondary-bright': colors.teal["500"],
         alternative: colors.blue["950"],
-        'alternative-bright': colors.purple["700"]
+        'alternative-bright': colors.purple["500"],
       }
     },
   },
