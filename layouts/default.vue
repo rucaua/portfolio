@@ -29,10 +29,6 @@
 
         </div>
       </div>
-
-      <!-- Mobile menu (hidden by default) -->
-      <div v-if="isMenuOpen" class="md:hidden py-4">
-      </div>
     </header>
 
     <Breadcrumbs/>
@@ -62,13 +58,9 @@ import Breadcrumbs from "~/components/Breadcrumbs.vue";
 export default {
   name: 'DefaultLayout',
   components: {Breadcrumbs},
-  setup() {
-    const runtimeConfig = useRuntimeConfig()
-    return {title: runtimeConfig.public.fullName}
-  },
   data() {
     return {
-      isMenuOpen: false
+      title: 'Max Tymofeiev'
     }
   },
   methods: {}
