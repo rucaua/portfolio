@@ -11,7 +11,7 @@
     <div class="mb-20">
       <div class="flex items-center justify-between w-full">
         <h2 class="text-4xl font-bold">{{ title }}</h2>
-        <a :href="pdfSrc" target="_blank" download class="btn">
+        <a :href="pdfSrc" target="_blank" download class="btn rainbow">
           Download Resume
         </a>
       </div>
