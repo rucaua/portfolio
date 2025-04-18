@@ -10,13 +10,13 @@ body {
 }
 
 
-.custom-scrollbar{
+.custom-scrollbar {
     scrollbar-width: thin;
     scrollbar-color: theme(colors.grey) theme(colors.main-dark);
 }
 
 .btn {
-    @apply px-4 py-2 text-white rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
+    @apply px-4 py-2 text-sm md:text-base text-white rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
 }
 
 .btn-light {
@@ -25,6 +25,10 @@ body {
 
 .link {
     @apply text-main hover:text-main-dark underline
+}
+
+.nav-link {
+    @apply px-3 py-2 hover:text-main active:text-secondary transition
 }
 
 .rainbow {
@@ -44,9 +48,31 @@ body {
     @apply flex items-center justify-center whitespace-nowrap;
 }
 
-.bg-dark-diagonal { @apply bg-gradient-to-br from-gray-800 to-main-dark}
+.bg-dark-diagonal {
+    @apply bg-gradient-to-br from-gray-800 to-main-dark
+}
 
 @keyframes highlight-pulse {
-    0% { background-color: theme(colors.main-dark) }
-    100% { background-color: transparent }
+    0% {
+        background-color: theme(colors.main-dark)
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+.page {
+    @apply mb-20 p-10 pt-0 md:p-0
+}
+
+h2 {
+    @apply text-2xl md:text-4xl font-bold
+}
+
+h3 {
+    @apply text-2xl md:text-4xl font-bold
+}
+
+h4 {
+    @apply text-lg font-bold
 }

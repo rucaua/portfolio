@@ -8,10 +8,10 @@
       <Meta name="og:type" content="website"/>
       <Meta name="og:url" :content="currentUrl"/>
     </Head>
-    <div class="mb-20">
+    <div class="page">
       <div class="flex flex-col w-full">
-        <h2 class="text-4xl font-bold">My works and projects</h2>
-        <div class="my-20">
+        <h2>My works and projects</h2>
+        <div class="my-4 md:my-20">
           <p class="pb-5">Throughout my 15+ year career as a full-stack developer, I've had the opportunity to work on
             numerous
             projects. While most were web-based SaaS solutions, my experience extends far beyond that. I've worked with
@@ -26,7 +26,7 @@
         </div>
 
         <div class="flex flex-row flex-wrap gap-y-12">
-          <div class="w-1/2 p-3">
+          <div class="article-wrapper">
             <Article title="Ananas Table" :inverseTitle="true" img="/images/ananas-table.webp"
                      link-text="Try the Plugin"
                      link-url="https://www.figma.com/community/plugin/1374168501688267750/ananas-table">
@@ -49,7 +49,7 @@
               </p>
             </Article>
           </div>
-          <div class="w-1/2 p-3">
+          <div class="article-wrapper">
             <Article title="My Personal Portfolio" img="/images/portfolio.webp" link-text="View Repository"
                      link-url="https://github.com/rucaua/portfolio">
               <p>
@@ -72,7 +72,7 @@
               </p>
             </Article>
           </div>
-          <div class="w-1/2 p-3">
+          <div class="article-wrapper">
             <Article title="UN1ON" img="/images/un1on.webp" link-text="Link to company website"
                      link-url="https://union1software.com/" :inverseTitle="true">
               <p>
@@ -96,11 +96,12 @@
               </p>
             </Article>
           </div>
-          <div class="w-1/2 p-3">
+          <div class="article-wrapper">
             <Article title="Youtube Channel" img="/images/youtube.webp" link-text="Link to My Yuotube Channel"
                      link-url="https://www.youtube.com/@rucaua" :inverse-title="true">
               <p>
-                Years ago, I ran a YouTube channel about development with the YII2 framework (PHP + OOP + AR). While it's
+                Years ago, I ran a YouTube channel about development with the YII2 framework (PHP + OOP + AR). While
+                it's
                 less popular in North America than Laravel, the frameworks share many similarities.
               </p>
               <p>
@@ -116,7 +117,7 @@
               </p>
             </Article>
           </div>
-          <div class="w-1/2 p-3">
+          <div class="article-wrapper">
             <Article title="Carmanah Signs" img="/images/carmanahsign.webp" link-text="Link to company website"
                      link-url="https://carmanahsigns.com/">
               <p>
@@ -152,4 +153,7 @@ export default {
 </script>
 
 <style scoped>
+.article-wrapper {
+  @apply w-full p-0 xl:w-1/2 xl:p-3;
+}
 </style>

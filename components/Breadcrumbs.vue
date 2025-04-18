@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto w-full py-10 text-grey" v-if="!isHome">
+  <div class="container mx-auto w-full p-10 md:px-0 py-4 md:py-10 text-grey" v-if="!isHome">
     <nav aria-label="Breadcrumb" class="flex items-center text-sm font-medium">
       <NuxtLink
           to="/"

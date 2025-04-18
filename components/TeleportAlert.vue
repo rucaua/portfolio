@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="w-full md:w-auto">
     <button
-        class="btn rainbow inline"
+        class="btn rainbow inline w-full md:w-auto"
         @click="startTeleportation"
     >
       <font-awesome icon="object-ungroup" size="xs" class="mr-2"/>
@@ -14,7 +14,7 @@
         class="fixed inset-0 bg-black/70 z-50 flex justify-center items-center"
     >
       <div
-          class="w-full max-w-2xl p-8 rounded-2xl text-center text-grey shadow-xl transition-all duration-300 bg-gradient-to-r from-main-dark to-alternative">
+          class="w-full max-w-2xl p-8 rounded-md text-center text-grey shadow-xl transition-all duration-300 bg-gradient-to-r from-main-dark to-alternative">
         <span class="text-4xl block mb-4">{{ alertIcon }}</span>
         <h3 class="text-2xl font-bold mb-2">{{ alertTitle }}</h3>
         <p class="my-6 text-xl whitespace-pre-line text-left">{{ alertMessage }}</p>

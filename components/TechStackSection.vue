@@ -1,15 +1,15 @@
 <template>
-  <section class="mt-20">
-    <h2 class="text-4xl font-bold text-center">Core Competencies</h2>
-    <div class="container mx-auto py-20 flex flex-col lg:flex-row flex-wrap justify-between">
+  <section class="mt-4 md:mt-20">
+    <h3 class="text-center">Core Competencies</h3>
+    <div class="container mx-auto py-4 md:py-20 flex flex-col lg:flex-row flex-wrap justify-between">
       <div v-for="item in data" :key="item.name" class="w-full lg:w-6/12">
-        <div class="p-10 h-full">
+        <div class="p-4 md:p-10 h-full">
           <div class="p-10 bg-dark-diagonal rounded-md h-full">
             <div class="flex items-center mb-2">
-              <span class="flex items-center justify-center text-main mr-2">
+              <span class="flex items-center justify-center text-main mr-4">
                 <font-awesome :icon="item.icon" size="2x"/>
               </span>
-              <h2 class="ml-2 text-lg font-bold text-grey">{{ item.name }}</h2>
+              <h4>{{ item.name }}</h4>
             </div>
             <div class="bg-grey rounded-full w-full h-2.5 my-5">
               <div
