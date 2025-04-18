@@ -39,13 +39,13 @@
             >
               <div class="bg-dark shadow-lg h-full w-full">
                 <ul class="flex flex-col p-8">
-                  <li v-for="link in menu" :key="link.label">
+                  <li v-for="linkObj in menu" :key="linkObj.label">
                     <NuxtLink
-                        :to="link.link"
+                        :to="linkObj.link || '/'"
                         class="block py-2 px-4 text-lg hover:text-main transition-colors duration-200"
                         @click="menuToggle"
                     >
-                      <font-awesome :icon="link.icon" :fixedWidth="true" class="mr-4 text-main" />{{link.label}}
+                      <font-awesome :icon="linkObj.icon" :fixedWidth="true" class="mr-4 text-main" />{{linkObj.label}}
                     </NuxtLink>
                   </li>
                 </ul>
@@ -92,6 +92,9 @@ export default {
     return {
       menuOpen: false,
       title: 'Max Tymofeiev',
+      /**
+       * @type {Array<{label: string, link: string, icon: string}>}
+       */
       menu: [
         {
           label: 'Home',

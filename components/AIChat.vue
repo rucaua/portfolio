@@ -1,5 +1,5 @@
 <template>
-  <div id="chat" class="px-4 md:px-10 md:px-0">
+  <div id="chat" class="px-4 md:px-10">
     <div class="max-w-3xl mx-auto p-4 md:p-10 bg-dark-diagonal shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-main-dark/50 rounded-md">
       <h2>Chat with My AI Assistant</h2>
       <div class="my-4 md:my-8 p-0 overflow-hidden">
