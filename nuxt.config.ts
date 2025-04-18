@@ -36,7 +36,8 @@ export default defineNuxtConfig({
                 'chevron-right',
                 'mobile-screen-button',
                 'at',
-                'object-ungroup'
+                'object-ungroup',
+                'download'
             ],
             brands: [
                 'php',

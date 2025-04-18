@@ -12,7 +12,7 @@
       <div class="flex items-center justify-between w-full">
         <h2>{{ title }}</h2>
         <a :href="pdfSrc" target="_blank" download class="btn rainbow">
-          Download Resume
+          <font-awesome icon="download" class="mr-2"/> Download Resume
         </a>
       </div>
     </div>
