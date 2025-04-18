@@ -68,7 +68,7 @@
         <div class="relative p-4 md:p-0 md:pr-20 md:min-w-60 flex flex-row md:flex-col">
           <p>© {{ new Date().getFullYear() }}</p>
           <p class="ml-2 md:ml-0">Tymofeiev Max</p>
-          <div class="absolute top-0 bottom-0 right-0 w-[6px] bg-gradient-to-b from-main to-secondary hidden md:block"></div>
+          <div class="absolute top-0 bottom-0 right-0 w-[4px] bg-gradient-to-b from-main to-secondary hidden md:block rounded-md"></div>
         </div>
         <div class="p-4 md:p-0 md:pl-20">
           <p>This site was created by Max Tymofeiev with VueJS (Nuxt.js) + Tailwind CSS and deployed via AWS Amplify. If

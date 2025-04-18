@@ -34,7 +34,7 @@ export default {
   name: 'ResumePage',
   data(){
     return {
-      pdfSrc: '/Full-Stack-Dev-Maksym-Tymofeiev.pdf',
+      pdfSrc: '/Maksym-Tymofeiev-Full-stack-Dev.pdf',
       title: 'Resume - Maksym Tymofeiev | Full-Stack Developer',
       description: 'View the professional resume of Maksym Tymofeiev, a Full-Stack Developer with expertise in modern web technologies.',
       currentUrl: useRequestURL()?.hash || ''

@@ -76,9 +76,9 @@
             <Article title="UN1ON" img="/images/un1on.webp" link-text="Link to company website"
                      link-url="https://union1software.com/" :inverseTitle="true">
               <p>
-                During my first 5 years in Canada, I worked on solutions for labor unions. This involved a suite of
-                products: a SaaS CRM system built with PHP backend and JavaScript frontend, mobile applications across
-                different platforms, and several desktop applications.
+                I worked on solutions for labor unions. This involved a suite of products: a SaaS CRM system built with
+                PHP backend and JavaScript frontend, mobile applications across different platforms, and several desktop
+                applications.
               </p>
               <p>
                 UN1ON apps provide comprehensive IT and marketing solutions for labor unions, helping them manage
