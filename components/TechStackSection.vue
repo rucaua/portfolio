@@ -2,7 +2,7 @@
   <section class="mt-4 md:mt-20">
     <h3 class="text-center">Core Competencies</h3>
     <div class="container mx-auto py-4 md:py-20 flex flex-col lg:flex-row flex-wrap justify-between">
-      <div v-for="item in data" :key="item.name" class="w-full lg:w-6/12">
+      <div v-for="item in data" :key="item.name" class="w-full lg:w-6/12 mx-0 md:-mx-10">
         <div class="p-4 md:p-10 h-full">
           <div class="p-10 bg-dark-diagonal rounded-md h-full">
             <div class="flex items-center mb-2">
