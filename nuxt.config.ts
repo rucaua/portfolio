@@ -37,7 +37,12 @@ export default defineNuxtConfig({
                 'mobile-screen-button',
                 'at',
                 'object-ungroup',
-                'download'
+                'download',
+                'bars',
+                'xmark',
+                'file-text',
+                'briefcase',
+                'envelope',
             ],
             brands: [
                 'php',

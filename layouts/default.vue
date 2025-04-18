@@ -1,31 +1,57 @@
 <template>
-  <div class="min-h-screen flex flex-col bg-dark text-grey text-md md:text-xl pt-[70px]">
+  <div class="min-h-screen flex flex-col bg-dark text-grey text-md md:text-xl pt-[60px]">
+    <div
+        @click="menuToggle"
+        class="fixed w-full h-screen top-[60px] left-0 z-10 transition-all duration-300"
+        :class="isMenuOpen ? 'display-block bg-opacity-90 backdrop-blur-sm' : 'hidden bg-opacity-0'"
+    ></div>
     <!-- Site Header -->
-    <header class="fixed top-0 left-0 right-0 h-[70px] z-10 border-b py-4 bg-opacity-90 backdrop-blur-sm shadow-md px-10 md:px-0">
+    <header class="fixed top-0 left-0 right-0 h-[60px] z-10 border-b py-4 bg-opacity-90 backdrop-blur-sm px-10 md:px-0">
       <div class="flex items-center justify-between container mx-auto">
         <div>
           <!-- Logo/Brand -->
           <NuxtLink to="/" class="font-bold text-2xl"><h1>{{ title }}</h1></NuxtLink>
         </div>
-
         <div class="flex items-center">
-          <!-- Navigation -->
+
+          <!-- Main Navigation -->
           <nav class="hidden md:block">
             <ul class="flex gap-4">
-              <li>
-                <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/resume" class="nav-link">Resume</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/portfolio" class="nav-link">Portfolio</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/#contact" class="nav-link">Contacts</NuxtLink>
+              <li v-for="link in menu" :key="link.label">
+                <NuxtLink :to="link.link" class="nav-link">
+                  {{link.label}}
+                </NuxtLink>
               </li>
             </ul>
           </nav>
+
+          <!-- Mobile Navigation -->
+          <div class="md:hidden">
+            <button @click="menuToggle" type="button" class="z-30">
+              <font-awesome
+                  :icon="isMenuOpen ? 'xmark' : 'bars'"
+                  :class="{'scale-125': isMenuOpen}"
+              />
+            </button>
+            <div
+                class="fixed top-[60px] right-0 h-screen transition-transform duration-300 transform flex flex-row justify-end w-9/12 z-20"
+                :class="isMenuOpen ? 'translate-x-0' : 'translate-x-full'"
+            >
+              <div class="bg-dark shadow-lg h-full w-full">
+                <ul class="flex flex-col p-8">
+                  <li v-for="link in menu" :key="link.label">
+                    <NuxtLink
+                        :to="link.link"
+                        class="block py-2 px-4 text-lg hover:text-main transition-colors duration-200"
+                        @click="menuToggle"
+                    >
+                      <font-awesome :icon="link.icon" :fixedWidth="true" class="mr-4 text-main" />{{link.label}}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -64,9 +90,41 @@ export default {
   components: {Breadcrumbs},
   data() {
     return {
-      title: 'Max Tymofeiev'
+      menuOpen: false,
+      title: 'Max Tymofeiev',
+      menu: [
+        {
+          label: 'Home',
+          link: '/',
+          icon: 'home'
+        },
+        {
+          label: 'Resume',
+          link: '/resume',
+          icon: 'file-text'
+        },
+        {
+          label: 'Portfolio',
+          link: '/portfolio',
+          icon: 'briefcase'
+        },
+        {
+          label: 'Contacts',
+          link: '/#contact',
+          icon: 'envelope'
+        }
+      ]
     }
   },
-  methods: {}
+  computed: {
+    isMenuOpen() {
+      return this.menuOpen
+    }
+  },
+  methods: {
+    menuToggle() {
+      this.menuOpen = !this.menuOpen
+    }
+  }
 }
 </script>
