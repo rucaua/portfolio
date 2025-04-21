@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'roboto', sans-serif;
     font-weight: 400;
+}
+strong {
+    color: theme(colors.grey);
 }
 
 
@@ -17,6 +20,10 @@ body {
 
 .btn {
     @apply px-4 py-2 text-sm md:text-base text-white rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
+}
+
+.btn-big {
+    @apply px-8 py-6 text-base md:text-lg text-white rounded-xl bg-main-dark hover:bg-main active:bg-alternative transition
 }
 
 .btn-light {
@@ -38,6 +45,14 @@ body {
 
 .rainbow:hover {
     background-position: 100% 0;
+}
+
+.soft-rainbow {
+    @apply bg-gradient-to-r from-gradient-start to-gradient-end;
+}
+
+.text-soft-rainbow {
+    @apply bg-gradient-to-r from-gradient-start to-gradient-end inline-block text-transparent bg-clip-text;
 }
 
 .highlight-animation {
@@ -75,4 +90,21 @@ h3 {
 
 h4 {
     @apply text-lg font-bold
+}
+
+ul.list-rainbow-circle {
+    @apply py-2 ml-4
+}
+
+ul.list-rainbow-circle li {
+    @apply relative pl-7 mb-2 leading-[2rem] items-center;
+}
+
+ul.list-rainbow-circle li::before {
+    @apply content-[''] absolute left-0 top-[0.6rem] w-[0.8rem] h-[0.8rem] rounded-full bg-gradient-to-r from-gradient-start to-gradient-end bg-[length:200%_100%] transition-all duration-500 ease-in-out;
+    background-position: 0 0;
+}
+
+ul.list-rainbow-circle li:hover::before {
+    background-position: 100% 0;
 }

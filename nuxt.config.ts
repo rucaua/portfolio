@@ -47,6 +47,10 @@ export default defineNuxtConfig({
                 'file-text',
                 'briefcase',
                 'envelope',
+                'computer',
+                'film',
+                'heart',
+                'clock'
             ],
             brands: [
                 'php',
@@ -56,7 +60,12 @@ export default defineNuxtConfig({
                 'python',
                 'linkedin',
                 'github',
-                'dev'
+                'dev',
+                'internet-explorer',
+                'apple',
+                'android',
+                'figma',
+                'docker'
             ]
         }
     },
