@@ -9,11 +9,11 @@
       <Meta name="og:url" :content="currentUrl"/>
     </Head>
     <div class="page">
-      <carmanah/>
-      <union/>
-      <my-web-site/>
-      <youtube/>
       <figma-plugin/>
+      <union/>
+      <youtube/>
+      <carmanah/>
+      <my-web-site/>
       <web-studio/>
     </div>
   </section>
@@ -26,7 +26,6 @@ import Youtube from "~/components/portfolio/Youtube.vue";
 import Carmanah from "~/components/portfolio/Carmanah.vue";
 import FigmaPlugin from "~/components/portfolio/FigmaPlugin.vue";
 import WebStudio from "~/components/portfolio/WebStudio.vue";
-
 export default {
   name: 'PortfolioPage',
   components: {WebStudio, FigmaPlugin, Carmanah, Union, MyWebSite, Youtube},
