@@ -13,6 +13,8 @@
       <union/>
       <my-web-site/>
       <youtube/>
+      <figma-plugin/>
+      <web-studio/>
     </div>
   </section>
 </template>
@@ -22,10 +24,12 @@ import Union from "~/components/portfolio/Union.vue";
 import MyWebSite from "~/components/portfolio/MyWebSite.vue";
 import Youtube from "~/components/portfolio/Youtube.vue";
 import Carmanah from "~/components/portfolio/Carmanah.vue";
+import FigmaPlugin from "~/components/portfolio/FigmaPlugin.vue";
+import WebStudio from "~/components/portfolio/WebStudio.vue";
 
 export default {
   name: 'PortfolioPage',
-  components: {Carmanah, Union, MyWebSite, Youtube},
+  components: {WebStudio, FigmaPlugin, Carmanah, Union, MyWebSite, Youtube},
   data() {
     return {
       title: 'Portfolio - Max Tymofeiev | Full-Stack Developer',
