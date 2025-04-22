@@ -1,8 +1,8 @@
 <template>
   <section class="container mx-auto py-2 md:py-20">
     <div class="flex flex-row flex-wrap justify-between mx-0 md:-mx-4">
-      <div class="flex flex-col flex-wrap w-full md:w-6/12 xl:w-3/12 px-4 my-4"
-           v-for="(feature, index) in data" :key="index">
+      <div v-for="(feature, index) in data"
+           :key="index" class="flex flex-col flex-wrap w-full md:w-6/12 xl:w-3/12 px-4 my-4">
         <div class="w-full feature-card bg-dark-diagonal p-8 rounded-md shadow-lg
      flex flex-col justify-center items-center h-full">
           <div class="relative inline-block">

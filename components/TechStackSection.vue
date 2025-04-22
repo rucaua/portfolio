@@ -13,17 +13,17 @@
             </div>
             <div class="bg-grey rounded-full w-full h-2.5 my-5">
               <div
-                  class="h-2.5 bg-gradient-to-r from-secondary to-main rounded-full"
                   :style="{
                 width: item.progress + '%'
-              }"/>
+              }"
+                  class="h-2.5 bg-gradient-to-r from-secondary to-main rounded-full"/>
             </div>
             <div class="text-grey">
               <p>{{ isExpanded[item.name] ? item.text : truncateText(item.text) }}</p>
               <button
                   v-if="item.text.length > 150"
-                  @click="toggleExpand(item.name)"
                   class="text-main hover:text-grey text-sm mt-1 focus:outline-none"
+                  @click="toggleExpand(item.name)"
               >
                 {{ isExpanded[item.name] ? 'Show less' : 'Show more' }}
               </button>

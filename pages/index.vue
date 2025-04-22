@@ -2,21 +2,22 @@
   <div class="container mx-auto">
     <Head>
       <Title>{{ title }}</Title>
-      <Meta name="description" :content="description" />
-      <Meta name="og:title" :content="title" />
-      <Meta name="og:description" :content="description" />
-      <Meta name="og:type" content="website" />
-      <Meta name="og:url" :content="currentUrl" />
+      <Meta name="description" :content="description"/>
+      <Meta name="og:title" :content="title"/>
+      <Meta name="og:description" :content="description"/>
+      <Meta name="og:type" content="website"/>
+      <Meta name="og:url" :content="currentUrl"/>
     </Head>
-    <hero-section />
-    <key-features-section :data="keyFeatures" />
+    <hero-section/>
+    <key-features-section :data="keyFeatures"/>
     <tech-stack-section :data="techData"/>
   </div>
 </template>
 
 <script>
 import HeroSection from '~/components/HeroSection.vue'
-import KeyFeaturesSection from "~/components/KeyFeaturesSection.vue";
+import KeyFeaturesSection from "@components/KeyFeaturesSection.vue";
+
 export default {
   name: 'IndexPage',
   components: {KeyFeaturesSection, HeroSection},
@@ -228,7 +229,7 @@ export default {
     return {
       title: 'Tymofeiev Max - Portfolio',
       meta: [
-        { name: 'description', content: 'Professional portfolio showcasing my work, skills, and experience' }
+        {name: 'description', content: 'Professional portfolio showcasing my work, skills, and experience'}
       ]
     }
   }

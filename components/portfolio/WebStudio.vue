@@ -1,5 +1,5 @@
 <template>
-  <portfolio-item :title="title" :subtitle="subtitle">
+  <portfolio-item :subtitle="subtitle" :title="title">
     <portfolio-item-graphic class="flex flex-col gap-6 w-2/4">
       <portfolio-item-text-wrapper>
 
@@ -63,11 +63,11 @@
     <portfolio-item-text class="flex flex-col gap-6 w-2/4">
       <portfolio-item-text-wrapper class="flex flex-col p-8 gap-10">
         <h4 class="text-4xl font-semibold mb-3">Technologies & Projects</h4>
-        <tags title="Frontend Technologies" :tags="frontendTechnologies"/>
-        <tags title="Backend Technologies" :tags="backendTechnologies"/>
-        <tags title="Cloud Technologies" :tags="cloudTechnologies"/>
-        <tags title="Integrations" :tags="integrations"/>
-        <tags title="Hybrid Development" :tags="hybrid"/>
+        <tags :tags="frontendTechnologies" title="Frontend Technologies"/>
+        <tags :tags="backendTechnologies" title="Backend Technologies"/>
+        <tags :tags="cloudTechnologies" title="Cloud Technologies"/>
+        <tags :tags="integrations" title="Integrations"/>
+        <tags :tags="hybrid" title="Hybrid Development"/>
         <h4 class="text-4xl font-semibold mb-3">Project Types</h4>
         <div class="flex flex-row flex-wrap -m-4">
           <div

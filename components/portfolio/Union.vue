@@ -1,8 +1,8 @@
 <template>
-  <portfolio-item :title="title" :subtitle="subtitle" :link-url="projectLink" :link-text="projectLinklabel">
+  <portfolio-item :link-text="projectLinklabel" :link-url="projectLink" :subtitle="subtitle" :title="title">
     <portfolio-item-graphic>
-      <portfolio-image :src="image" :alt="title"/>
-      <portfolio-info :title="info" :sub-title="subInfo"/>
+      <portfolio-image :alt="title" :src="image"/>
+      <portfolio-info :sub-title="subInfo" :title="info"/>
       <icon-list :icons="icons"/>
     </portfolio-item-graphic>
     <portfolio-item-text>
@@ -42,8 +42,8 @@
             <span
                 v-for="tech in technologies"
                 :key="tech.name"
-                class="px-3 py-2 text-sm rounded-md border border-white/5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary/10 hover:text-zinc-100"
-                :class="tech.highlight ? 'bg-secondary/15 border-secondary/20' : 'bg-white/5'">
+                :class="tech.highlight ? 'bg-secondary/15 border-secondary/20' : 'bg-white/5'"
+                class="px-3 py-2 text-sm rounded-md border border-white/5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary/10 hover:text-zinc-100">
               {{ tech.name }}
             </span>
         </div>
@@ -53,17 +53,8 @@
 </template>
 
 <script>
-
-import IconList from "~/components/IconList.vue";
-import PortfolioItem from "~/components/portfolio/PortfolioItem.vue";
-import PortfolioImage from "~/components/portfolio/PortfolioImage.vue";
-import PortfolioInfo from "~/components/portfolio/PortfolioInfo.vue";
-import PortfolioItemTextWrapper from "~/components/portfolio/PortfolioItemTextWrapper.vue";
-import PortfolioTextBlock from "~/components/portfolio/PortfolioTextBlock.vue";
-
 export default {
   name: "Union",
-  components: {PortfolioItemTextWrapper, PortfolioImage, PortfolioItem, IconList, PortfolioInfo, PortfolioTextBlock},
   data() {
     return {
       title: 'UN1ON',

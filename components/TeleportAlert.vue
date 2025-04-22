@@ -4,7 +4,7 @@
         class="btn rainbow inline w-full md:w-auto"
         @click="startTeleportation"
     >
-      <font-awesome icon="object-ungroup" size="xs" class="mr-2"/>
+      <font-awesome class="mr-2" icon="object-ungroup" size="xs"/>
       Teleport to Me
     </button>
 

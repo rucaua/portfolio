@@ -1,16 +1,17 @@
 <template>
-  <section class="container my-4 xl:my-28 p-1 md:p-0" id="contact">
+  <section id="contact" class="container my-4 xl:my-28 p-1 md:p-0">
     <div class="flex flex-col xl:flex-row items-start justify-between">
       <div class="w-full xl:w-5/12 text-center xl:text-left">
         <h2 class="text-6xl md:text-9xl font-bold drop-shadow-2xl">Welcome to my Portfolio</h2>
         <div class="flex flex-row w-full py-10 gap-4 justify-start items-center rounded-md" data-highlight="contact">
-          <div class="flex flex-col md:flex-row w-full gap-4 justify-center xl:justify-start items-center px-10 md:px-0">
+          <div
+              class="flex flex-col md:flex-row w-full gap-4 justify-center xl:justify-start items-center px-10 md:px-0">
             <a :href="mailLink" class="btn rainbow inline w-full md:w-auto">
-              <font-awesome icon="at" size="xs" class="mr-2"/>
+              <font-awesome class="mr-2" icon="at" size="xs"/>
               Mail Me
             </a>
             <a :href="phoneLink" class="btn rainbow inline w-full md:w-auto">
-              <font-awesome size="xs" :icon="['fas', 'mobile-screen-button']" class="mr-2"/>
+              <font-awesome :icon="['fas', 'mobile-screen-button']" class="mr-2" size="xs"/>
               Call Me
             </a>
             <TeleportAlert/>
@@ -30,15 +31,15 @@
         </div>
       </div>
       <div class="w-full xl:w-5/12">
-        <AIChat />
+        <AIChat/>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AIChat from "~/components/AIChat.vue";
-import TeleportAlert from "~/components/TeleportAlert.vue";
+import AIChat from "@components/AIChat.vue";
+import TeleportAlert from "@components/TeleportAlert.vue";
 
 export default {
   name: 'HeroSection',

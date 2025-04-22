@@ -1,9 +1,9 @@
 <template>
-  <portfolio-item :title="title" :subtitle="subtitle" :link-url="projectLink"
-                  :link-text="projectLinklabel">
+  <portfolio-item :link-text="projectLinklabel" :link-url="projectLink" :subtitle="subtitle"
+                  :title="title">
     <portfolio-item-graphic>
       <video :src="image" autoplay></video>
-      <portfolio-info :title="info" :sub-title="subInfo"/>
+      <portfolio-info :sub-title="subInfo" :title="info"/>
     </portfolio-item-graphic>
     <portfolio-item-text>
       <portfolio-item-text-wrapper>
@@ -35,7 +35,7 @@
         </portfolio-text-block>
       </portfolio-item-text-wrapper>
 
-      <tags title="Technologies Used:" :tags="technologies" class="p-8"/>
+      <tags :tags="technologies" class="p-8" title="Technologies Used:"/>
     </portfolio-item-text>
   </portfolio-item>
 </template>

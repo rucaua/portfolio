@@ -1,9 +1,11 @@
 <template>
   <div id="chat" class="px-4 md:px-10">
-    <div class="max-w-3xl mx-auto p-4 md:p-10 bg-dark-diagonal shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-main-dark/50 rounded-md">
+    <div
+        class="max-w-3xl mx-auto p-4 md:p-10 bg-dark-diagonal shadow-[0_0_60px_15px_rgba(0,0,0,0.3)] shadow-main-dark/50 rounded-md">
       <h2>Chat with My AI Assistant</h2>
       <div class="my-4 md:my-8 p-0 overflow-hidden">
-        <div ref="chatContainer" class="p-0 md:p-4 flex flex-col gap-4 h-[300px] md:h-[400px] overflow-y-auto custom-scrollbar">
+        <div ref="chatContainer"
+             class="p-0 md:p-4 flex flex-col gap-4 h-[300px] md:h-[400px] overflow-y-auto custom-scrollbar">
           <div
               v-for="(message, i) in displayMessages"
               :key="i"
@@ -23,19 +25,19 @@
           </div>
         </div>
         <div class="px-2 md:px-4 pt-4 md:pt-10 border-t-4 border-dark/50">
-          <form @submit.prevent="sendMessage" class="flex gap-2">
+          <form class="flex gap-2" @submit.prevent="sendMessage">
             <textarea
                 v-model="newMessage"
-                placeholder="Type your message..."
-                class="flex-1 border rounded-md p-2 text-dark resize-none focus:outline-none focus:ring-0 focus:border-main-dark"
-                :rows="1"
                 :disabled="loading"
+                :rows="1"
+                class="flex-1 border rounded-md p-2 text-dark resize-none focus:outline-none focus:ring-0 focus:border-main-dark"
+                placeholder="Type your message..."
                 @keydown="handleKeyDown"
             />
             <button
-                type="submit"
-                class="bg-main-dark text-white px-1 md:px-4 py-2 rounded-md"
                 :disabled="!newMessage.trim() || loading"
+                class="bg-main-dark text-white px-1 md:px-4 py-2 rounded-md"
+                type="submit"
             >
               <font-awesome icon="paper-plane"/>
             </button>

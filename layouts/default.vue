@@ -83,7 +83,7 @@
 
 <script>
 
-import Breadcrumbs from "~/components/Breadcrumbs.vue";
+import Breadcrumbs from "@components/Breadcrumbs.vue";
 
 export default {
   name: 'DefaultLayout',

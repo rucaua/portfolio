@@ -8,9 +8,9 @@
     <div class="flex flex-row w-full">
       <slot/>
     </div>
-    <div class="p-8 text-right w-full" v-if="linkUrl">
-      <a :href="linkUrl" target="_blank"
-         class="btn btn-big rainbow">
+    <div v-if="linkUrl" class="p-8 text-right w-full">
+      <a :href="linkUrl" class="btn btn-big rainbow"
+         target="_blank">
         {{ linkText }}
       </a>
     </div>
