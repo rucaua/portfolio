@@ -31,7 +31,7 @@
                 :disabled="loading"
                 :rows="1"
                 class="flex-1 border rounded-md p-2 text-dark resize-none focus:outline-none focus:ring-0 focus:border-main-dark"
-                placeholder="Type your message..."
+                placeholder="Ask question about my experience ..."
                 @keydown="handleKeyDown"
             />
             <button
@@ -56,7 +56,7 @@ export default {
       displayMessages: [
         {
           role: 'assistant',
-          content: "Hi there! I'm the AI assistant. How can I help you learn more about my experience, skills, or projects today?"
+          content: "Hello, I’m Max’s personal AI assistant. I’m here to share insights about his professional journey, technical expertise, and passion for software engineering and tech. Please feel free to ask me anything!"
         }
       ],
       newMessage: '',
