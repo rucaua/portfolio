@@ -84,11 +84,10 @@
 <script>
 
 import Breadcrumbs from "@components/Breadcrumbs.vue";
-import AnimatedBack from "@components/AnimatedBack.vue";
 
 export default {
   name: 'DefaultLayout',
-  components: {AnimatedBack, Breadcrumbs},
+  components: {Breadcrumbs},
   data() {
     return {
       menuOpen: false,
