@@ -1,9 +1,8 @@
 <template>
   <portfolio-item :subtitle="subtitle" :title="title">
-    <portfolio-item-graphic class="flex flex-col gap-6 w-2/4">
+    <portfolio-item-graphic class="flex flex-col gap-6 md:w-2/4">
       <portfolio-item-text-wrapper>
-
-        <div class="flex flex-row justify-between p-8">
+        <div class="flex flex-row justify-between p-4 md:p-8">
           <div>
             <h4 class="text-4xl font-semibold mb-3">Full Stack Developer & Co-Founder</h4>
             <div class="flex flex-row justify-start items-center my-6">
@@ -60,8 +59,8 @@
 
       </portfolio-item-text-wrapper>
     </portfolio-item-graphic>
-    <portfolio-item-text class="flex flex-col gap-6 w-2/4">
-      <portfolio-item-text-wrapper class="flex flex-col p-8 gap-10">
+    <portfolio-item-text class="flex flex-col gap-6 md:w-2/4">
+      <portfolio-item-text-wrapper class="flex flex-col p-4 md:p-8 gap-10">
         <h4 class="text-4xl font-semibold mb-3">Technologies & Projects</h4>
         <tags :tags="frontendTechnologies" title="Frontend Technologies"/>
         <tags :tags="backendTechnologies" title="Backend Technologies"/>
@@ -69,11 +68,11 @@
         <tags :tags="integrations" title="Integrations"/>
         <tags :tags="hybrid" title="Hybrid Development"/>
         <h4 class="text-4xl font-semibold mb-3">Project Types</h4>
-        <div class="flex flex-row flex-wrap -m-4">
+        <div class="flex flex-col md:flex-row flex-wrap -m-4">
           <div
               v-for="project in projectTypes"
               :key="project.type"
-              class="w-1/2 p-4">
+              class="md:w-1/2 p-4">
             <div class="p-4 text-base rounded-xl border border-white/5 bg-white/5 h-full">
               <h5 class="text-gradient-start text-2xl mb-4">{{ project.type }}</h5>
               <p>{{ project.description }}</p>
