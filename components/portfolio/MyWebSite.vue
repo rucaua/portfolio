@@ -83,18 +83,7 @@
         </portfolio-text-block>
       </portfolio-item-text-wrapper>
 
-      <div class="p-8">
-        <h3 class="text-xl font-semibold mb-4">Technologies Used:</h3>
-        <div class="flex flex-wrap gap-2">
-            <span
-                v-for="tech in technologies"
-                :key="tech.name"
-                :class="tech.highlight ? 'bg-secondary/15 border-secondary/20' : 'bg-white/5'"
-                class="px-3 py-2 text-sm rounded-md border border-white/5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-secondary/10 hover:text-zinc-100">
-              {{ tech.name }}
-            </span>
-        </div>
-      </div>
+      <tags :tags="technologies" class="py-8 md:p-8" title="Technologies Used:"/>
     </portfolio-item-text>
   </portfolio-item>
 </template>
