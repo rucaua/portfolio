@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -20,15 +20,12 @@ strong {
 }
 
 .btn {
-    @apply px-4 py-2 text-sm md:text-base text-white rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
+    @apply px-4 py-2 font-semibold text-sm md:text-base text-dark rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
 }
 
 .btn-big {
-    @apply px-8 py-6 text-base md:text-lg text-white rounded-xl bg-main-dark hover:bg-main active:bg-alternative transition
-}
-
-.btn-light {
-    @apply px-4 py-2 text-white rounded-md bg-main-dark hover:bg-main active:bg-alternative transition
+    @apply btn;
+    @apply px-8 py-6 text-base md:text-lg
 }
 
 .link {
