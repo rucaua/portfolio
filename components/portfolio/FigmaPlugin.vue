@@ -35,7 +35,7 @@
         </portfolio-text-block>
       </portfolio-item-text-wrapper>
 
-      <tags :tags="technologies" class="p-8" title="Technologies Used:"/>
+      <tags :tags="technologies" class="py-8 md:p-8" title="Technologies Used:"/>
     </portfolio-item-text>
   </portfolio-item>
 </template>
