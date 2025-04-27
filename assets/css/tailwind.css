@@ -78,7 +78,7 @@ strong {
 }
 
 .page {
-    @apply mb-20 p-10 pt-0 md:p-0
+    @apply mb-20 p-6 pt-0 md:p-0
 }
 
 h2 {

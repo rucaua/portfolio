@@ -1,6 +1,6 @@
 <template>
-  <div class="flex flex-col gap-6 w-1/3">
-    <div class="pr-10 flex flex-col gap-6">
+  <div class="flex flex-col gap-6 md:w-1/3">
+    <div class="md:pr-10 flex flex-col gap-6">
       <slot/>
     </div>
   </div>
