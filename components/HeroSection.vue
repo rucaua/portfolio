@@ -2,7 +2,7 @@
   <section id="contact" class="container my-4 xl:my-28 p-1 md:p-0">
     <div class="flex flex-col xl:flex-row items-start justify-between">
       <div class="w-full xl:w-5/12 text-center xl:text-left">
-        <h2 class="text-6xl md:text-9xl font-bold drop-shadow-2xl">Welcome to my Portfolio</h2>
+        <h2 class="text-6xl md:text-9xl font-bold drop-shadow-2xl">{{ heroTitle }}</h2>
         <div class="flex flex-row w-full py-10 gap-4 justify-start items-center rounded-md" data-highlight="contact">
           <div
               class="flex flex-col md:flex-row w-full gap-4 justify-center xl:justify-start items-center px-10 md:px-0">
@@ -46,6 +46,7 @@ export default {
   components: {AIChat, TeleportAlert},
   data() {
     return {
+      heroTitle: 'Senior Software <Dev/>',
       mailLink: 'mailto:tymofeiev.m@gmail.com',
       phoneLink: 'tel:+14168908703',
       linkedInLink: 'https://www.linkedin.com/in/max-tymofeiev/',
