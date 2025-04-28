@@ -2,7 +2,7 @@
   <portfolio-item :link-text="projectLinklabel" :link-url="projectLink" :subtitle="subtitle"
                   :title="title">
     <portfolio-item-graphic>
-      <video :src="image" autoplay></video>
+      <img :src="image" alt="title" />
       <portfolio-info :sub-title="subInfo" :title="info"/>
     </portfolio-item-graphic>
     <portfolio-item-text>
@@ -47,7 +47,7 @@ export default {
     return {
       title: 'Figma: the Plugin Project',
       subtitle: null,
-      image: '/images/figma-plugin.mp4',
+      image: '/images/figma.webp',
       projectLink: 'https://www.figma.com/community/plugin/1374168501688267750/ananas-table',
       projectLinklabel: 'Try the Plugin',
       info: 'over 1300',
